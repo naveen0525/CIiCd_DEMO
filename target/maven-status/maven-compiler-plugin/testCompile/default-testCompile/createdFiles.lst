@@ -1,0 +1,6 @@
+PageObjects_Methods\LoginPageObjects.class
+Utilities\SeleniumBaseClass.class
+TestClasses\LoginTest.class
+TestClasses\RegistrationTest$RegistraionTest.class
+TestClasses\RegistrationTest.class
+PageObjects_Methods\RegistrationPageObject.class
