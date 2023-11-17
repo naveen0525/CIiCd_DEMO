@@ -1,6 +1,4 @@
 package Utilities;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -11,12 +9,12 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumBaseClass {
-    WebDriver driver;
+    EdgeDriver driver;
 
     public WebDriver setUp() {
         Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
-//        System.setProperty("webdriver.chrome.driver", ".\\resources\\drivers\\chrome.exe");
+        System.setProperty("webdriver.edge.driver", ".\\resources\\drivers\\edge\\msedgedriver.exe");
 
      /*   EdgeOptions options = new EdgeOptions();
         // ChromeDriver is just AWFUL because every version or two it breaks unless you pass cryptic arguments
@@ -30,8 +28,9 @@ public class SeleniumBaseClass {
         options.addArguments("--disable-gpu"); //https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
 */
         // Set up the wWebDriverManager for chrome driver
-        WebDriverManager.edgedriver().setup();
+//        WebDriverManager.edgedriver().setup();
         // Create the driver object
+
         driver = new EdgeDriver();
 
 
