@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Selenium with TESTNG - CI
+name: Selenium with TestNG - CI
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-        
+    
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
     
