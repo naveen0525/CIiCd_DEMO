@@ -17,8 +17,9 @@ public class LoginTest extends SeleniumBaseClass {
     public void login() throws IOException, InterruptedException {
         driver = setUp();
         loginPg = new LoginPageObjects(driver);
-        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
+//        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
-        loginPg.login(prop.getProperty("loginEmail"),prop.getProperty("loginPassword"), false);
+//        loginPg.login(prop.getProperty("loginEmail"),prop.getProperty("loginPassword"), false);
+        loginPg.login("admin1@yopmail.com","Federal@123", false);
     }
 }
