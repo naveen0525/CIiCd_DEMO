@@ -20,6 +20,6 @@ public class LoginTest extends SeleniumBaseClass {
 //        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
 //        loginPg.login(prop.getProperty("loginEmail"),prop.getProperty("loginPassword"), false);
-        loginPg.login("admin1@yopmail.com","Federal@123", false);
+        loginPg.login("dan+admin@micromanage.ca","Federal@123", false);
     }
 }
