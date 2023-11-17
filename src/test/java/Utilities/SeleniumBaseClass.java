@@ -2,8 +2,8 @@ package Utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class SeleniumBaseClass {
 
 //        System.setProperty("webdriver.chrome.driver", ".\\resources\\drivers\\chrome.exe");
 
-        ChromeOptions options = new ChromeOptions();
+     /*   EdgeOptions options = new EdgeOptions();
         // ChromeDriver is just AWFUL because every version or two it breaks unless you pass cryptic arguments
         //AGRESSIVE: options.setPageLoadStrategy(PageLoadStrategy.NONE); // https://www.skptricks.com/2018/08/timed-out-receiving-message-from-renderer-selenium.html
         options.addArguments("start-maximized"); // https://stackoverflow.com/a/26283818/1689770
@@ -28,11 +28,11 @@ public class SeleniumBaseClass {
 //        options.addArguments("--disable-dev-shm-usage"); //https://stackoverflow.com/a/50725918/1689770
         options.addArguments("--disable-browser-side-navigation"); //https://stackoverflow.com/a/49123152/1689770
         options.addArguments("--disable-gpu"); //https://stackoverflow.com/questions/51959986/how-to-solve-selenium-chromedriver-timed-out-receiving-message-from-renderer-exc
-
+*/
         // Set up the wWebDriverManager for chrome driver
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.edgedriver().setup();
         // Create the driver object
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
 
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
