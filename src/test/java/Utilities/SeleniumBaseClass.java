@@ -9,12 +9,13 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumBaseClass {
-    EdgeDriver driver;
+    ChromeDriver driver;
 
     public WebDriver setUp() {
         Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
-        System.setProperty("webdriver.edge.driver", ".\\resources\\drivers\\edge\\msedgedriver.exe");
+        // System.setProperty("webdriver.edge.driver", ".\\resources\\drivers\\edge\\msedgedriver.exe");
+        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
 
      /*   EdgeOptions options = new EdgeOptions();
         // ChromeDriver is just AWFUL because every version or two it breaks unless you pass cryptic arguments
@@ -31,7 +32,7 @@ public class SeleniumBaseClass {
 //        WebDriverManager.edgedriver().setup();
         // Create the driver object
 
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
 
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
