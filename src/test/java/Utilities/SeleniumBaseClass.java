@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class SeleniumBaseClass {
     WebDriver driver;
 
-    public WebDriver setUp() throws IOException {
+    public WebDriver setUp() {
         Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
         /*System.setProperty("webdriver.chrome.driver", ".\\resources\\drivers\\chrome.exe");*/
@@ -24,7 +23,7 @@ public class SeleniumBaseClass {
         //AGRESSIVE: options.setPageLoadStrategy(PageLoadStrategy.NONE); // https://www.skptricks.com/2018/08/timed-out-receiving-message-from-renderer-selenium.html
         options.addArguments("start-maximized"); // https://stackoverflow.com/a/26283818/1689770
         options.addArguments("enable-automation"); // https://stackoverflow.com/a/43840128/1689770
-        options.addArguments("--headless"); // only if you are ACTUALLY running headless
+//        options.addArguments("--headless"); // only if you are ACTUALLY running headless
         options.addArguments("--no-sandbox"); //https://stackoverflow.com/a/50725918/1689770
         options.addArguments("--disable-dev-shm-usage"); //https://stackoverflow.com/a/50725918/1689770
         options.addArguments("--disable-browser-side-navigation"); //https://stackoverflow.com/a/49123152/1689770
@@ -43,18 +42,16 @@ public class SeleniumBaseClass {
         return driver;
     }
 
-    public static Properties readPropertiesFile(String fileName) throws IOException {
-        FileInputStream fis = null;
+    public static Properties readPropertiesFile(String fileName) {
+        FileInputStream fis;
         Properties prop = null;
         try {
             fis = new FileInputStream(fileName);
             prop = new Properties();
             prop.load(fis);
-        } catch(FileNotFoundException fnfe) {
+        } catch(IOException fnfe) {
             fnfe.printStackTrace();
-        } catch(IOException ioe) {
-            ioe.printStackTrace();
-        } 
+        }
         return prop;
     }
 }
