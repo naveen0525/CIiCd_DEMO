@@ -1,5 +1,0 @@
-# Created at 2023-07-27T17:31:36.006
-Boot Manifest-JAR contains absolute paths in classpath 'F:\amit\Java_programs\FederalMetals-SCMS\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

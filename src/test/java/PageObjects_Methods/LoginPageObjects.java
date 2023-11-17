@@ -31,7 +31,7 @@ public class LoginPageObjects {
 
     public void login(String superAdminEmail, String superAdminPassword, boolean registered) throws InterruptedException {
         Thread.sleep(1000);
-        if (!registered) {
+        if (registered) {
             List<WebElement> loginLink = driver.findElements(By.xpath("//a[@class=\"nav-link\"]"));
             loginLink.get(0).click();
         }
@@ -41,7 +41,7 @@ public class LoginPageObjects {
         Thread.sleep(2000);
         login_button.click();
         Thread.sleep(2000);
-        Assert.assertEquals(driver.getTitle(), "Provider 1 | Dashboard");
+        Assert.assertEquals(driver.getTitle(), "Provider1 | Dashboard");
     }
 
 }

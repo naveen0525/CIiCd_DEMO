@@ -54,7 +54,7 @@ public class RegistrationPageObject {
 
 	public void registration(String Fname, String Lname, String email, String company, String password,
 			String cpassword, String phone, String provider) throws InterruptedException {
-		loginLink.click();
+//		loginLink.click();
 		clickOnRegistraitonButton.click();
 		this.enterFirstName.sendKeys(Fname);
 		this.enterLastName.sendKeys(Lname);

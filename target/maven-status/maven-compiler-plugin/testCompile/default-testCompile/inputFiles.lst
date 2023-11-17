@@ -1,5 +1,4 @@
-F:\amit\Java_programs\FederalMetals-SCMS\src\test\java\PageObjects_Methods\RegistrationPageObject.java
-F:\amit\Java_programs\FederalMetals-SCMS\src\test\java\PageObjects_Methods\LoginPageObjects.java
-F:\amit\Java_programs\FederalMetals-SCMS\src\test\java\TestClasses\LoginTest.java
-F:\amit\Java_programs\FederalMetals-SCMS\src\test\java\TestClasses\RegistrationTest.java
-F:\amit\Java_programs\FederalMetals-SCMS\src\test\java\Utilities\SeleniumBaseClass.java
+E:\F Drive\amit\CiCd_Testing\FM_Test\src\test\java\TestClasses\LoginTest.java
+E:\F Drive\amit\CiCd_Testing\FM_Test\src\test\java\PageObjects_Methods\LoginPageObjects.java
+E:\F Drive\amit\CiCd_Testing\FM_Test\src\test\java\Utilities\SeleniumBaseClass.java
+E:\F Drive\amit\CiCd_Testing\FM_Test\src\test\java\PageObjects_Methods\RegistrationPageObject.java
