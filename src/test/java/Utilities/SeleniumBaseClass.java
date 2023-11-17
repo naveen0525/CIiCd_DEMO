@@ -13,7 +13,6 @@ public class SeleniumBaseClass {
 
     public WebDriver setUp() {
 //        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
-
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
