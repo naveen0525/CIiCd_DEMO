@@ -21,8 +21,9 @@ public class SeleniumBaseClass {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.get("https://federalmetal.chetu.com/");
+        driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
+        driver.get("https://federalmetal.chetu.com/");
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         return driver;
     }
