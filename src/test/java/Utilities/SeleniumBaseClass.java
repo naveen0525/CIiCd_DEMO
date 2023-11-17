@@ -26,6 +26,7 @@ public class SeleniumBaseClass {
         driver.get("https://staging.micromanage.ca/");
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         return driver;
+
     }
 
     /*public static Properties readPropertiesFile(String fileName) {

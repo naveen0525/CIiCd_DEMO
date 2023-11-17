@@ -21,5 +21,6 @@ public class LoginTest extends SeleniumBaseClass {
 
 //        loginPg.login(prop.getProperty("loginEmail"),prop.getProperty("loginPassword"), false);
         loginPg.login("dan+admin@micromanage.ca","Federal@123", false);
+
     }
 }
