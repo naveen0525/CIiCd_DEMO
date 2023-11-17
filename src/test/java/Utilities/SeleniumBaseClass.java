@@ -14,7 +14,7 @@ public class SeleniumBaseClass {
     public WebDriver setUp() {
         Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
 
-        System.setProperty("webdriver.edge.driver", "\\E:\\F Drive\\amit\\CiCd_Testing\\FM_Test\\resources\\drivers\\edge\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", ".\\resources\\drivers\\edge\\msedgedriver.exe");
 
      /*   EdgeOptions options = new EdgeOptions();
         // ChromeDriver is just AWFUL because every version or two it breaks unless you pass cryptic arguments
