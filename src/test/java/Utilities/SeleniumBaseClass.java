@@ -54,9 +54,7 @@ public class SeleniumBaseClass {
             fnfe.printStackTrace();
         } catch(IOException ioe) {
             ioe.printStackTrace();
-        } finally {
-            fis.close();
-        }
+        } 
         return prop;
     }
 }
