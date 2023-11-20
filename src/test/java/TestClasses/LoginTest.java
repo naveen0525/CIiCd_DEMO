@@ -23,7 +23,8 @@ public class LoginTest extends SeleniumBaseClass {
 
     @BeforeTest
     public static void beforeTest() {
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Reports/extentReport.html");
+//        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Reports/extentReport.html");
+        htmlReporter = new ExtentHtmlReporter("test-output/extentReport.html");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
 
