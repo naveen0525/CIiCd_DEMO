@@ -34,6 +34,7 @@ public class LoginPageObjects {
         if (registered) {
             List<WebElement> loginLink = driver.findElements(By.xpath("//a[@class=\"nav-link\"]"));
             loginLink.get(0).click();
+
         }
 
         this.email.sendKeys(superAdminEmail);
