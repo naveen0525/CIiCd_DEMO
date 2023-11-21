@@ -42,4 +42,6 @@ jobs:
         publish_dir: ./Reports/
     - name: Deploy to github pages
       id: deployment
+      with:
+        path: test-merge-report-demo/
       uses: actions/deploy-pagesv@1
