@@ -44,4 +44,4 @@ jobs:
       id: deployment
       with:
         path: test-merge-report-demo/
-      uses: actions/deploy-pagesv@1
+      uses: peaceiris/actions-gh-pages@v3
