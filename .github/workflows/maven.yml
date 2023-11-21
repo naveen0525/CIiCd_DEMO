@@ -39,7 +39,7 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-pages-artifact@v1
       with:
-        path: ./Reports/
+        publish_dir: ./Reports/
     - name: Deploy to github pages
       id: deployment
       uses: actions/deploy-pagesv@1
