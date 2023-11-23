@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class LoginTest extends SeleniumBaseClass {
     LoginPageObjects loginPg;
@@ -37,7 +38,7 @@ public class LoginTest extends SeleniumBaseClass {
     }
 
     @Test
-    public void login() throws IOException, InterruptedException {
+    public void login() throws IOException, InterruptedException, URISyntaxException {
         driver = setUp();
         loginPg = new LoginPageObjects(driver);
 //        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
