@@ -33,7 +33,7 @@ public class SeleniumBaseClass {
 
     }
 
-/*    public static Properties readPropertiesFile(String fileName) {
+    public static Properties readPropertiesFile(String fileName) {
 
         FileInputStream fis;
         Properties prop = null;
@@ -46,9 +46,9 @@ public class SeleniumBaseClass {
         }
 
         return prop;
-    }*/
+    }
 
-    public Properties readPropertiesFile(String fileName) throws IOException {
+   /* public Properties readPropertiesFile(String fileName) throws IOException {
         Properties props = new Properties();
         URL url = ClassLoader.getSystemResource(fileName);
         props.load(url.openStream());
@@ -59,6 +59,6 @@ public class SeleniumBaseClass {
     public String getPropertyValue(String key){
         return this.prop.getProperty(key);
     }
-
+*/
 
 }
