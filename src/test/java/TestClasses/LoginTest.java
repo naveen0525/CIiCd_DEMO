@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Properties;
 
 public class LoginTest extends SeleniumBaseClass {
     LoginPageObjects loginPg;
@@ -41,16 +42,14 @@ public class LoginTest extends SeleniumBaseClass {
     public void login() throws IOException, InterruptedException, URISyntaxException {
         driver = setUp();
         loginPg = new LoginPageObjects(driver);
-//        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
+        Properties prop = readPropertiesFile("./src/resources/Property/essential.properties");
 
-//        loginPg.login(prop.getProperty("loginEmail"),prop.getProperty("loginPassword"), false);
-        loginPg.login("dan+admin@micromanage.ca", "Federal@123", false);
+        loginPg.login(prop.getProperty("loginEmail"), prop.getProperty("loginPassword"), false);
+
         test = extent.createTest("Test Case 2", "The test case 2 has failed");
 //        test.log(Status.PASS, result.getTestName());
 
         //to write or update test information to reporter
         extent.flush();
-
-
     }
 }

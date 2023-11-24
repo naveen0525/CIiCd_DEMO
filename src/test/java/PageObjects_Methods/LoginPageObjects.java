@@ -42,7 +42,7 @@ public class LoginPageObjects {
         Thread.sleep(2000);
         login_button.click();
         Thread.sleep(2000);
-        Assert.assertEquals(driver.getTitle(), "Micro | Providers");
+        Assert.assertEquals(driver.getTitle(), "Provider1 | Dashboard");
     }
 
 }

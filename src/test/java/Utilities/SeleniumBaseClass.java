@@ -16,7 +16,7 @@ public class SeleniumBaseClass {
     ChromeDriver driver;
 
     public WebDriver setUp() throws IOException {
-        Properties prop = readPropertiesFile(".\\resources\\Property\\essential.properties");
+        Properties prop = readPropertiesFile("./src/resources/Property/essential.properties");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -26,7 +26,6 @@ public class SeleniumBaseClass {
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
-//        this.getPropertyValue("url");
         driver.get(prop.getProperty("url"));
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         return driver;
@@ -47,18 +46,4 @@ public class SeleniumBaseClass {
 
         return prop;
     }
-
-   /* public Properties readPropertiesFile(String fileName) throws IOException {
-        Properties props = new Properties();
-        URL url = ClassLoader.getSystemResource(fileName);
-        props.load(url.openStream());
-        System.out.println(props);
-        return props;
-    }
-
-    public String getPropertyValue(String key){
-        return this.prop.getProperty(key);
-    }
-*/
-
 }
