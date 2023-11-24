@@ -34,9 +34,11 @@ jobs:
     - name: Build with Maven
       run: mvn clean test
 
-    - name: Deploy report to GitHub page
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-        
+    - name: upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with: 
+          path: './htmlcov/'
+
+    - name: Deploy to github pages
+      uses: actions/deploy-pages@v2
+      id: deployment
