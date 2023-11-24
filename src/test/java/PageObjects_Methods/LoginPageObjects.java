@@ -38,7 +38,7 @@ public class LoginPageObjects {
         }
 
         this.email.sendKeys(superAdminEmail);
-        this.password.sendKeys(superAdminPassword);
+        this.password.sendKeys(superAdminPassword+"test");
         Thread.sleep(2000);
         login_button.click();
         Thread.sleep(2000);
