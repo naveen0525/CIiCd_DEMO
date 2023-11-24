@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-24T14:13:56 UTC" name="Surefire suite" finished-at="2023-11-24T14:14:06 UTC" duration-ms="9801">
+  <suite started-at="2023-11-24T16:06:57 UTC" name="Surefire suite" finished-at="2023-11-24T16:07:06 UTC" duration-ms="9413">
     <groups>
     </groups>
-    <test started-at="2023-11-24T14:13:56 UTC" name="Surefire test" finished-at="2023-11-24T14:14:06 UTC" duration-ms="9801">
+    <test started-at="2023-11-24T16:06:57 UTC" name="Surefire test" finished-at="2023-11-24T16:07:06 UTC" duration-ms="9413">
       <class name="TestClasses.LoginTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestClasses.LoginTest@e3b3b2f]" started-at="2023-11-24T14:13:56 UTC" name="beforeTest" finished-at="2023-11-24T14:13:56 UTC" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestClasses.LoginTest@e3b3b2f]" started-at="2023-11-24T16:06:57 UTC" name="beforeTest" finished-at="2023-11-24T16:06:57 UTC" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="login()[pri:0, instance:TestClasses.LoginTest@e3b3b2f]" started-at="2023-11-24T14:13:56 UTC" name="login" finished-at="2023-11-24T14:14:06 UTC" duration-ms="9539" status="PASS">
+        <test-method signature="login()[pri:0, instance:TestClasses.LoginTest@e3b3b2f]" started-at="2023-11-24T16:06:57 UTC" name="login" finished-at="2023-11-24T16:07:06 UTC" duration-ms="9148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
