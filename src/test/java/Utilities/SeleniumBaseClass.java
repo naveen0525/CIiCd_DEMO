@@ -16,7 +16,7 @@ public class SeleniumBaseClass {
     ChromeDriver driver;
 
     public WebDriver setUp() throws IOException {
-        Properties prop = readPropertiesFile(".\\src\\resources\\Property\\essential.properties");
+        Properties prop = readPropertiesFile("./src/resources/Property/essential.properties");
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
