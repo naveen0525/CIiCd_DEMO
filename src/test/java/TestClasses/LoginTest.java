@@ -51,5 +51,6 @@ public class LoginTest extends SeleniumBaseClass {
 
         //to write or update test information to reporter
         extent.flush();
+        
     }
 }
