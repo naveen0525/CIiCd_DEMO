@@ -51,6 +51,12 @@ public class LoginTest extends SeleniumBaseClass {
 
         //to write or update test information to reporter
         extent.flush();
-        
+
+        WebElement element = driver.findElement(By.xpath("//h5[contains(text(), 'Providers')]"));
+
+		String expectedValue = "Providers";
+
+		Assert.assertEquals(element.getText(), expectedValue);
+		System.out.print("------Login ");
     }
 }
