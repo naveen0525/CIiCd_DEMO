@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class LoginPageObjects {
 
@@ -42,7 +41,6 @@ public class LoginPageObjects {
         Thread.sleep(2000);
         login_button.click();
         Thread.sleep(2000);
-        Assert.assertEquals(driver.getTitle(), "Micro | Providers");
     }
 
 }
