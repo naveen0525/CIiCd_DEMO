@@ -52,9 +52,9 @@ public class LoginTest extends SeleniumBaseClass {
         test = extent.createTest("Test Case 2", "The test case 2 has failed");
 //        test.log(Status.PASS, result.getTestName());
 
-	        WebElement element = driver.findElement(By.xpath("//h5[contains(text(), 'Providers')]"));
+	        WebElement element = driver.findElement(By.xpath("//title[contains(text(), 'Micro | Providers')]"));
 
-		String expectedValue = "Providers";
+		String expectedValue = "Micro | Providers";
 
 		Assert.assertEquals(element.getText(), expectedValue);
 		System.out.print("------Login ");
