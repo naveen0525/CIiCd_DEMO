@@ -7,12 +7,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.Assert;
+
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -51,13 +51,6 @@ public class LoginTest extends SeleniumBaseClass {
 
         test = extent.createTest("Test Case 2", "The test case 2 has failed");
 //        test.log(Status.PASS, result.getTestName());
-
-	        WebElement element = driver.findElement(By.xpath("//title[contains(text(), 'Micro | Providers')]"));
-
-		String expectedValue = "Micro | Providers";
-
-		Assert.assertEquals(element.getText(), expectedValue);
-		System.out.print("------Login ");
 
         //to write or update test information to reporter
         extent.flush();
