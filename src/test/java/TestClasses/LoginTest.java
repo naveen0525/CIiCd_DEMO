@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-
+import org.testng.Assert;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -51,6 +51,9 @@ public class LoginTest extends SeleniumBaseClass {
 
         test = extent.createTest("Test Case 2", "The test case 2 has failed");
 //        test.log(Status.PASS, result.getTestName());
+        String expectedTitle = "Micro | Providers";
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
 
         //to write or update test information to reporter
         extent.flush();
