@@ -52,14 +52,15 @@ public class LoginTest extends SeleniumBaseClass {
         test = extent.createTest("Test Case 2", "The test case 2 has failed");
 //        test.log(Status.PASS, result.getTestName());
 
-        //to write or update test information to reporter
-        extent.flush();
-
-        WebElement element = driver.findElement(By.xpath("//h5[contains(text(), 'Providers')]"));
+	        WebElement element = driver.findElement(By.xpath("//h5[contains(text(), 'Providers')]"));
 
 		String expectedValue = "Providers";
 
 		Assert.assertEquals(element.getText(), expectedValue);
 		System.out.print("------Login ");
+
+        //to write or update test information to reporter
+        extent.flush();
+
     }
 }
