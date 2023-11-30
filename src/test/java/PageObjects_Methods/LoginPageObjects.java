@@ -40,7 +40,6 @@ public class LoginPageObjects {
         this.password.sendKeys(superAdminPassword+"test");
         Thread.sleep(2000);
         login_button.click();
-        Thread.sleep(2000);
     }
 
 }
